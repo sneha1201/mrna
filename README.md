@@ -20,17 +20,20 @@ Tools used internally: fastp,fastp,seqkit,multiqc, HISAT2,samtools, featureCount
 Input File Formats
 
 sample_info.tsv
+
 Sample	File Name	Pair
 Control_1	Control_1_R1_001.fastq.gz	Pair1
 Control_1	Control_1_R2_001.fastq.gz	Pair2
 
 metadata.tsv
+
 SampleID	Condition
 Control_1	control
 PTX_12_1	PTX_12
 DOXO_15_2	DOXO_15
 
 comparisions.csv
+
 numerator,denominator
 PTX_12,control
 PTX_15,control
