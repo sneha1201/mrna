@@ -1,17 +1,20 @@
 # mrna
 mRNA Reference-Based RNA-seq Pipeline
-
-🧬 Overview
+Overview
 The pipeline includes the following key steps:
 
 1)Quality Control and Quantification using mrna_reference_base_quant.py
+
 2)Conversion to DESeq2-Compatible Format using deseq2_compatable_featurecountfile.py
+
 3)Differential Expression Analysis using reference_base_deseq2.R
+
 4)Pathway Enrichment Analysis (optional) using pathway.R
 
  Requirements
 Python 3.8+
 R (≥ 4.0)
+
 Tools used internally: fastp,fastp,seqkit,multiqc, HISAT2,samtools, featureCounts, MultiQC, DESeq2, gprofiler2,EnhancedVolcano,pheatmap
 
 Input File Formats
@@ -34,8 +37,10 @@ PTX_15,control
 DOXO_12,control
 DOXO_15,control
 
-⚙️ Pipeline Steps
-1️⃣ FASTQ to Feature Counts
+Pipeline Steps
+
+FASTQ to Feature Counts
+
 Run the main quantification script:
 
 python mrna_reference_base_quant.py \
@@ -48,11 +53,13 @@ python mrna_reference_base_quant.py \
   --threads 20
 
 Convert to DESeq2-Compatible Format
+
 python deseq2_compatable_featurecountfile.py \
   -i path_to_output_folder/feature_counts_gene_names.txt \
   -o path_to_output_folder/feature_counts_gene_names_deseq2.txt
 
 Differential Expression Analysis with DESeq2
+
 Rscript reference_base_deseq2.R \
   --counts path_to_output_folder/feature_counts_gene_names_deseq2.txt \
   --metadata 5_deseq2/metadata.tsv \
@@ -60,6 +67,7 @@ Rscript reference_base_deseq2.R \
   --outdir 5_deseq2/
 
  Optional: Pathway Enrichment (via g:Profiler)
+ 
 Rscript pathway.R \
   --filtered 5_deseq2/DOXO_15_VS_control_Filtered_LFC_1_FDR_0.05.csv \
   -p DOXO_15_VS_control \
