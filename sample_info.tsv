@@ -1,0 +1,20 @@
+Sample	File Name	Pair
+X1	X1_S14_L002_R1_001.fastq.gz	Pair1
+X1	X1_S14_L002_R2_001.fastq.gz	Pair2
+X2	X2_S15_L002_R1_001.fastq.gz	Pair1
+X2	X2_S15_L002_R2_001.fastq.gz	Pair2
+X3	X3_S16_L002_R1_001.fastq.gz	Pair1
+X3	X3_S16_L002_R2_001.fastq.gz	Pair2
+T1	T1_S28_L001_R1_001.fastq.gz	Pair1
+T1	T1_S28_L001_R2_001.fastq.gz	Pair2
+T2	T2_S29_L001_R1_001.fastq.gz	Pair1
+T2	T2_S29_L001_R2_001.fastq.gz	Pair2
+T3	T3_S30_L001_R1_001.fastq.gz	Pair1
+T3	T3_S30_L001_R2_001.fastq.gz	Pair2
+CONTROL_1	CONTROL_1_S31_L001_R1_001.fastq.gz	Pair1
+CONTROL_1	CONTROL_1_S31_L001_R2_001.fastq.gz	Pair2
+CONTROL_2	CONTROL_2_S32_L001_R1_001.fastq.gz	Pair1
+CONTROL_2	CONTROL_2_S32_L001_R2_001.fastq.gz	Pair2
+CONTROL_3	CONTROL_3_S33_L001_R1_001.fastq.gz	Pair1
+CONTROL_3	CONTROL_3_S33_L001_R2_001.fastq.gz	Pair2
+
