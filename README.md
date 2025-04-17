@@ -1,4 +1,4 @@
-# mrna
+# mRNA
 mRNA Reference-Based RNA-seq Pipeline
 Overview
 The pipeline includes the following key steps:
@@ -10,6 +10,8 @@ The pipeline includes the following key steps:
 3)Differential Expression Analysis using reference_base_deseq2.R
 
 4)Pathway Enrichment Analysis (optional) using pathway.R
+
+5) For Venn Diagram venn_diagram.R (optional)
 
  Requirements
 Python 3.8+
@@ -85,7 +87,15 @@ Rscript pathway.R \
   --outdir 5_deseq2 \
   --species hsapiens
 
--p the name for the output files
+  -p the name for the output files
 Ensure filenames and sample names are consistent across all files.
 The gene_attribute must match the attribute in your GTF/GFF used by featureCounts.
 Set --species appropriately for g:Profiler (hsapiens, mmusculus, etc.)
+
+  Rscript venn_diagram.R \
+  --normalized 5_Deseq2/Normalized_expression_values.csv \
+  --metadata /5_Deseq2/metadata.tsv \
+  --comparisons /5_Deseq2/comparision.csv 
+  --outdir /5_Deseq2
+
+
