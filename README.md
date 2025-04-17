@@ -11,7 +11,7 @@ The pipeline includes the following key steps:
 
 4)Pathway Enrichment Analysis (optional) using pathway.R
 
-5) For Venn Diagram venn_diagram.R (optional)
+5)For Venn Diagram venn_diagram.R (optional)
 
  Requirements
 Python 3.8+
