@@ -98,4 +98,17 @@ Set --species appropriately for g:Profiler (hsapiens, mmusculus, etc.)
   --comparisons /5_Deseq2/comparision.csv 
   --outdir /5_Deseq2
 
+  for sample file
+
+ls *.fastq.gz | sort | while read file; do
+
+>     sample=$(echo "$file" | cut -d'_' -f1)  # Extract sample name like C1, C2, etc.
+
+>     pair=$(echo "$file" | grep -o '_R[12]_001' | sed 's/_R1_001/Pair1/; s/_R2_001/Pair2/')
+
+>     echo -e "${sample}\t${file}\t${pair}"
+
+> done > sample_file.tsv
+  
+
 
